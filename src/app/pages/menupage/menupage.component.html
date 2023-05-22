@@ -22,15 +22,13 @@
       </div>
     </div>
   </div>
-
+  <!--  [routerLink]="['/menu:', furnitures.id]"-->
 
   <div class="row">
     <h1 class="text-center mb-2 mt-5 fw-bold">Возможно вам понравится</h1>
     <div class="col-lg-3 w-100 mt-3" *ngFor="let furnitures of furniture; index as i">
       <div class="foodBox mt-3" *ngIf="i<=3">
-        <a [routerLink]="['/menu', furnitures.id]"
-           [routerLinkActive]="'active'"
-           [routerLinkActiveOptions]="{ exact: true }">
+        <a [routerLink]="['/menu/', furnitures.id]">
           <img class="w-100" src="{{furnitures.furnituresImg}}" alt="">
           <div class="image-overlay">
             <span class="text-overlay p-1">

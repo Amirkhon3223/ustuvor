@@ -9,27 +9,27 @@ import {OrderDetailsService} from "../../services/order-details.service";
   styleUrls: ['./menupage.component.css']
 })
 export class MenupageComponent implements OnInit {
-
-  constructor(
-    private param: ActivatedRoute,
-    private service: OrderDetailsService,
-  ) {
-  }
-
-  getMenuId: any;
+  menuId: any;
   menuData: any;
   furniture: any;
 
+  constructor(
+    private route: ActivatedRoute,
+    private service: OrderDetailsService
+  ) {
+  }
+
   ngOnInit() {
     this.furniture = this.service.furnitureDetails;
+    this.route.paramMap.subscribe(params => {
+      this.menuId = params.get('id');
+      this.updateData(); // Вызываем функцию обновления данных при изменении параметра 'id'
+    });
+  }
 
-    this.getMenuId = this.param.snapshot.paramMap.get('id');
-    console.log(this.getMenuId, 'getmenu')
-    if (this.getMenuId) {
-      this.menuData = this.service.furnitureDetails.filter((value) => {
-        return value.id == this.getMenuId;
-      });
-      console.log(this.menuData, 'menudata >> ')
+  updateData() {
+    if (this.menuId) {
+      this.menuData = this.service.furnitureDetails.filter(value => value.id == this.menuId);
     }
   }
 }

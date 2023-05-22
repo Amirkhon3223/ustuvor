@@ -23,7 +23,6 @@ import { MenupageComponent } from './pages/menupage/menupage.component';
     ContactComponent,
     MenupageComponent,
 
-
   ],
   imports: [
     BrowserModule,
