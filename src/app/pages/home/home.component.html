@@ -1,0 +1,84 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active"
+         *ngFor="let carousel of carouselData; let i = index"
+         [class.active]="i === 0"
+    >
+      <img class="d-block w-100" [src]="carousel.slideImg" alt="Slide {{i+1}}">
+      <div class="carousel-caption info" [ngStyle]="{ color: carousel.textColor }">
+        <h1>{{carousel.slideName}}</h1>
+        <p>{{carousel.slideDescription}}</p>
+        <a routerLink="menu" class="btn btn-cadetblue">Order Now <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+  <!--  slide button prev-->
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <!--  slide button next-->
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="container step mt-5 mb-5">
+  <h1 class="text-center">How to get <span style="color: cadetblue">furniture to order?</span></h1>
+  <div class="row mt-5">
+
+    <div class="col-lg-4">
+      <div class="stepBox">
+        <h1>1</h1>
+        <p>Select furniture</p>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="stepBox">
+        <h1>2</h1>
+        <p>Fill the details</p>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="stepBox">
+        <h1>3</h1>
+        <p>Your order deliver in minute</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container mt-5 mb-5 justify-content-center my-auto mx-auto text-center">
+  <div class="row">
+    <h1 class="text-center mb-2">Daleri Ustuvor</h1>
+    <div class="col-lg-3 w-100 mt-3" *ngFor="let furnitures of furniture; index as i">
+      <div class="foodBox mt-3" *ngIf="i<=7">
+        <a [routerLink]="['/menu', furnitures.id]">
+          <img class="w-100" src="{{furnitures.furnituresImg}}">
+          <div class="image-overlay">
+            <span class="text-overlay p-1">
+              <span class="">{{furnitures.furnituresDetail | slice:0:100}}</span>
+              <h4 class="mt-4">{{furnitures.furnituresName}}</h4>
+              <p class="">{{furnitures.furnituresPrice | currency:'TJS '}}</p>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <a routerLink="menu" class="btn btn-cadetblue text-center mt-4 mb-5">
+    View more
+  </a>
+</div>
+
+
+
+

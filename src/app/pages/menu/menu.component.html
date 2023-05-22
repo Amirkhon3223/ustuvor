@@ -1,0 +1,21 @@
+<div class="container mt-5 mb-5">
+  <div class="container mt-5 mb-5 justify-content-center my-auto mx-auto text-center">
+    <div class="row">
+      <h1 class="text-center mb-2 mt-5">Все видов мебели</h1>
+      <div class="col-lg-4 w-100 mt-3" *ngFor="let furnitures of furniture; index as i">
+        <div class="foodBox mt-3" >
+          <a [routerLink]="['/menu', furnitures.id]">
+            <img class="w-100" src="{{furnitures.furnituresImg}}">
+            <div class="image-overlay">
+            <span class="text-overlay p-1">
+              <span class="">{{furnitures.furnituresDetail | slice:0:100}}</span>
+              <h4 class="mt-4">{{furnitures.furnituresName}}</h4>
+              <p class="">{{furnitures.furnituresPrice | currency:'TJS '}}</p>
+            </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

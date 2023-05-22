@@ -1,0 +1,27 @@
+.footer{
+  overflow: hidden;
+  position: sticky;
+  top: 100%;
+  background: #fafafa;
+  padding: 20px 10px;
+}
+
+h1{
+
+}
+p{
+  font-size: 15px;
+}
+
+a{
+  text-decoration: none;
+  padding: 0 5px;
+  color: cadetblue;
+  font-size: 20px;
+}
+i{
+  color: black;
+  font-size: 35px;
+}
+
+
