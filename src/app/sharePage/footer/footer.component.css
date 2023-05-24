@@ -1,27 +1,27 @@
 .footer{
   overflow: hidden;
-  position: sticky;
   top: 100%;
-  background: #fafafa;
-  padding: 20px 10px;
+  background: #181813;
+}
+.footer-brand h1{
+  color: #ffb338;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.footer-brand p{
+  font-size: 1.2rem;
+  color: white;
 }
 
-h1{
-
-}
-p{
-  font-size: 15px;
-}
-
-a{
-  text-decoration: none;
-  padding: 0 5px;
-  color: cadetblue;
-  font-size: 20px;
-}
-i{
-  color: black;
-  font-size: 35px;
-}
+/*a{*/
+/*  text-decoration: none;*/
+/*  padding: 0 5px;*/
+/*  color: cadetblue;*/
+/*  font-size: 20px;*/
+/*}*/
+/*i{*/
+/*  color: black;*/
+/*  font-size: 35px;*/
+/*}*/
 
 
