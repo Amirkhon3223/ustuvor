@@ -1,18 +1,20 @@
-.navbar-light .navbar-nav .nav-link .active-link{
-  color: #ffffff;
+.navbar .nav-link.active-link {
+  color: #ffb300;
   font-weight: bold;
 }
 
-.navbar-brand{
+.navbar .navbar-brand {
   font-weight: bold;
   font-size: 1.8rem;
+  color: #ffb300;
 }
 
-.nav-link{
-  color: #ff0000;
+.navbar-dark .nav-link {
+  color: #ffffff;
   font-size: 1.5rem;
   margin-right: 1.5rem;
 }
+
 .nav-link:hover{
   color: white;
 }

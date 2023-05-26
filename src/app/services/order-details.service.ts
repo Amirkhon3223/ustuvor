@@ -108,24 +108,22 @@ export class OrderDetailsService {
       furnituresInStock: "Available: InStock",
       furnituresImg: "../../../assets/images/Product11.png"
     },
-
-
   ]
 
 
   carouselSlide = [
     {
       id: 1,
-      slideName: "Далери Устувор Мебель",
-      slideDescription: "Камтар дарбораи устуорча навистан даркор, и что Далер рукожопча",
+      slideName: "Устувор - качественная мебель для вашего дома",
+      slideDescription: "Ваш надежный выбор для создания стильной и удобной мебели",
       slideImg: "../../../assets/images/bannerako.png",
       orderThis: "Хар!",
       textColor: 'white',
     },
     {
       id: 2,
-      slideName: "Далери кашкар Китчен",
-      slideDescription: "Камтар дарбораи Китчен навистан даркор, и что ин ганда зур НЕ, и что Далер чмо",
+      slideName: "Идеальная кухня для вашего пространства",
+      slideDescription: "Кухни, сочетающие функциональность, стиль и качество. Воплощаем вашу мечту в реальность",
       slideImg: "../../../assets/images/bannerako2.jpg",
       orderThis: "Хар!",
       textColor: 'white',
@@ -134,8 +132,9 @@ export class OrderDetailsService {
     },
     {
       id: 3,
-      slideName: "Дванча, эси усуча короче",
-      slideDescription: "Камтар дарбораи Диванча навистан даркор, и что ин ганда зур НЕ, сали",
+      slideName: "Создайте идеальную атмосферу с нашими диванами",
+      slideDescription: "Наши диваны — это слияние комфорта, элегантности и надежности. " +
+        "Позвольте себе насладиться комфортом и качеством",
       slideImg: "../../../assets/images/bannerako3.png",
       orderThis: "Хар!",
       textColor: 'black',

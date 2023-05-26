@@ -10,10 +10,10 @@
          [class.active]="i === 0"
     >
       <img class="d-block w-100" [src]="carousel.slideImg" alt="Slide {{i+1}}">
-      <div class="carousel-caption info" [ngStyle]="{ color: carousel.textColor }">
+      <div class="carousel-caption info vh-100" [ngStyle]="{ color: carousel.textColor }">
         <h1>{{carousel.slideName}}</h1>
         <p>{{carousel.slideDescription}}</p>
-        <a routerLink="menu" class="btn btn-cadetblue">Order Now <i class="bi bi-arrow-right"></i></a>
+        <a routerLink="contact" class="btn btn-cadetblue">Связаться <i class="bi bi-arrow-right"></i></a>
       </div>
     </div>
   </div>
@@ -29,12 +29,10 @@
   </a>
 </div>
 
-
-
 <div class="container mt-5 mb-5 justify-content-center my-auto mx-auto text-center">
-  <div class="row">
-    <h1 class="text-center mb-2 mt-5">Daleri Ustuvor</h1>
-    <div class="col-lg-3 w-100 mt-3" *ngFor="let furnitures of furniture; index as i">
+  <div class="row align-items-sm-center">
+    <h1 class="text-center mb-2 mt-5">Рекомендуемые продукты</h1>
+    <div class="col-lg-3 col-md-6 col-sm-12 w-100 mt-3" *ngFor="let furnitures of furniture; index as i">
       <div class="foodBox mt-3" *ngIf="i<=7">
         <a [routerLink]="['/menu', furnitures.id]">
           <img class="w-100" src="{{furnitures.furnituresImg}}">

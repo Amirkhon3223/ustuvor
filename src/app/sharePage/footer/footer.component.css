@@ -1,27 +1,78 @@
-.footer{
-  overflow: hidden;
+.footer-container {
   top: 100%;
   background: #181813;
 }
-.footer-brand h1{
+footer a{
+  text-decoration: none;
+}
+
+.footer-container h1 {
+  margin-top: 10px;
   color: #ffb338;
   font-size: 3rem;
   font-weight: bold;
 }
-.footer-brand p{
+
+.footer-container p {
   font-size: 1.2rem;
   color: white;
+  margin-top: 10px;
 }
 
-/*a{*/
-/*  text-decoration: none;*/
-/*  padding: 0 5px;*/
-/*  color: cadetblue;*/
-/*  font-size: 20px;*/
-/*}*/
-/*i{*/
-/*  color: black;*/
-/*  font-size: 35px;*/
-/*}*/
+.footer-container .navigation {
+  margin-top: 25px;
+}
+
+.footer-container .footer-link {
+  margin-right: 30px;
+  font-size: 1.5rem;
+  color: #ffb300;
+  transition: .2s;
+}
+.footer-container .footer-link:hover{
+  color: white;
+  transition: .2s;
+}
+
+.footer-container .social-link {
+  font-size: 1.8rem;
+  margin-right: 20px;
+  transition: .2s;
+}
+
+.footer-container .social-link.facebook {
+  color: #1876f0;
+}
+
+.footer-container .social-link.instagram {
+  color: #e50589;
+}
+
+.footer-container .social-link.telegram {
+  color: #1e94cf;
+}
+.footer-container i:hover{
+  color: white;
+  transition: .2s;
+}
 
 
+@media screen and (max-width: 480px) {
+  .footer-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-container .navigation {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+
+  .footer-container .social-link {
+    margin-right: 15px; /* убран отступ справа */
+    margin-bottom: 10px; /* добавлен отступ снизу */
+  }
+}
