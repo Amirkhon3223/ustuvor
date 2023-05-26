@@ -79,7 +79,7 @@ export class OrderDetailsService {
       furnituresName: "Стул для гостинной",
       furnituresDetail: "Стул для гостинной или для офисов, также хорошо будет смотреться в переговорных кабинетах." +
         "Удобная и практичная",
-      furnituresPrice: 270,
+      furnituresPrice: 340,
       furnituresInStock: "Доступно: В наличии",
       furnituresImg: "../../../assets/images/Product8.png"
     },
