@@ -3,6 +3,14 @@
   font-weight: bold;
 }
 
+.navbar {
+  transition: transform 0.3s;
+}
+
+.scrolled {
+  transform: translateY(-100%);
+}
+
 .navbar .navbar-brand {
   font-weight: bold;
   font-size: 1.8rem;
