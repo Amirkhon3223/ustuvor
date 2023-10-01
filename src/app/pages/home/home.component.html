@@ -1,0 +1,89 @@
+<app-hero-section></app-hero-section>
+
+<div class="max-w-7xl mx-auto px-5 sm:px-3 md:px-10 lg:px-5 xl:px-0">
+  <!-- component -->
+  <div class="flex justify-center items-center">
+    <div class="2xl:mx-auto 2xl:container lg:py-5 md:py-5 sm:py-0 w-96 sm:w-auto">
+      <div role="main" class="flex flex-col items-center justify-center">
+        <h1 class="lg:text-4xl text-2xl font-bold text-center text-gray-800 dark:text-gray-50">
+          Мебели, отражающие ваш стиль и уютное пространство
+        </h1>
+        <p class="lg:text-lg text-sm font-medium leading-normal text-center text-gray-600 dark:text-white mt-2 w-full">
+          Погрузитесь в мир красоты и комфорта с нашей коллекцией лучшей мебели. <br>
+          Мы предлагаем широкий выбор стилей и дизайнов, которые помогут превратить ваш дом в уютное место
+        </p>
+      </div>
+
+      <div class="lg:flex items-stretch mt-4">
+        <div class="lg:w-1/2">
+          <div class="grid grid-cols-2 gap-x-6 gap-y-4">
+            <ng-container *ngFor="let item of furnitureDetails.slice(0,3); let i = index">
+              <div [routerLink]="['/decorative/', item.id]"
+                class="relative overflow-hidden cursor-pointer group" [ngClass]="{'col-span-2': i === 2}">
+                <p class="p-2 sm:p-6 text-xs lg:text-lg font-medium leading-3 text-white absolute top-0 right-0">
+                  Price: {{ item.price }}</p>
+                <div class="absolute bottom-0 left-0 sm:p-6 p-2">
+                  <h2 class="sm:text-md text-xs lg:text-lg mb-1 font-normal text-white">{{ item.name }}</h2>
+                  <p class="sm:text-sm text-xs leading-4 font-thin text-white">{{ item.type }}</p>
+                  <a
+                    href="javascript:void(0)"
+                    class="focus:outline-none focus:underline flex items-center sm:mt-2 mt-0 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                    <p class="pr-2 sm:text-sm text-xs lg:text-lg font-medium leading-none">Read More</p>
+                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
+                <img [src]="item.img" class="h-full w-full object-cover object-center" [alt]="item.name"/>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="lg:w-1/2 xl:ml-8 lg:ml-4 lg:mt-0 md:mt-6 mt-1 lg:flex flex-col justify-between">
+          <div class="grid grid-cols-2 gap-x-6 gap-y-4">
+            <ng-container *ngFor="let item of furnitureDetails.slice(3,6); let i = index">
+              <div [routerLink]="['/decorative/', item.id]"
+                   class="relative overflow-hidden cursor-pointer group" [ngClass]="{'col-span-2': i === 0}">
+                <p class="p-2 sm:p-6 text-xs lg:text-lg font-medium leading-3 text-white absolute top-0 right-0">
+                  Price: {{ item.price }}</p>
+                <div class="absolute bottom-0 left-0 sm:p-6 p-2">
+                  <h2 class="sm:text-md text-xs lg:text-lg mb-1 font-normal text-white">{{ item.name }}</h2>
+                  <p class="sm:text-sm text-xs lg:text-lg leading-4 font-thin text-white">{{ item.type }}</p>
+                  <a
+                    href="javascript:void(0)"
+                    class="focus:outline-none focus:underline flex items-center sm:mt-2 mt-0 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                    <p class="pr-2 sm:text-sm text-xs lg:text-lg font-medium leading-none">Read More</p>
+                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
+                <img [src]="item.img" class="h-full w-full object-cover object-center" [alt]="item.name"/>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+<p class="text-center sm:py-0 py-5 lg:mb-5">
+  <button
+    routerLink="contact"
+    class="bg-[#ffb338] font-medium p-2 px-3 rounded-lg hover:scale-110 hover:text-white transition">
+    Отправить запрос
+  </button>
+</p>
+
+</div>
+
+
+

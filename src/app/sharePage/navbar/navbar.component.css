@@ -1,0 +1,40 @@
+.navbar {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.scrolled {
+  transform: translateY(-100%);
+}
+
+
+/* Стили для боковой панели */
+.fixed {
+  position: fixed;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.translate-x-0 {
+  transform: translateX(0);
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}

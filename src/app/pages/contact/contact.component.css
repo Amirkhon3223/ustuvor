@@ -1,0 +1,72 @@
+.contact {
+  background-image: url("../../../assets/images/abbb.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+}
+
+.contact-form,
+.contact-info {
+  background-color: rgba(43, 45, 48, 0.8);
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  height: 100%;
+  margin-top: 0;
+  color: #ffb300;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.form-control{
+  width: 250px;
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.contact-info p{
+  font-size: 20px;
+}
+
+.phone-number{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px) {
+  .contact {
+    min-height: max-content;
+    padding: 1rem;
+  }
+  
+  .contact-form,
+  .contact-info {
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    display: block;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container {
+    margin-top: 2rem;
+  }
+
+  .form-control {
+    width: 100%;
+    margin-bottom: 1rem; /* Добавил небольшой отступ между полями */
+  }
+}

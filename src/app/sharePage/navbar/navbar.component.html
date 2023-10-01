@@ -1,0 +1,68 @@
+<div class="relative">
+  <!-- Sidebar (боковая панель) -->
+  <div
+    [@menuAnimation]="isMenuOpen"
+    class="fixed top-0 right-0 z-50 w-40 h-full bg-black text-white transition-transform transform translate-x-0 ease-in-out duration-300"
+  >
+    <div class="flex flex-col relative text-right space-y-5 pr-5 top-20" (click)="toggleMenu()" >
+      <a class="text-xl font-normal text-white hover:text-yellow-600"
+         routerLink=""
+         routerLinkActive="active-link"
+         [routerLinkActiveOptions]="{exact:true}">Главная
+      </a>
+      <a class="text-xl font-normal text-white hover:text-yellow-600"
+         routerLink="menu"
+         routerLinkActive="active-link">Меню
+      </a>
+      <a class="text-xl font-normal text-white hover:text-yellow-600"
+         routerLink="contact"
+         routerLinkActive="active-link">Контакты
+      </a>
+    </div>
+  </div>
+
+  <!-- Навбар -->
+  <div class="n z-50 w-full navbar fixed bg-black px-4 py-2 sm:px-6" [class.scrolled]="scrolled">
+    <div class="max-w-7xl mx-auto py-1" id="navbarNav">
+      <nav class="relative flex items-center justify-between md:justify-between sm:justify-between" aria-label="Global">
+        <a routerLink="" class="font-bold text-3xl text-yellow-600 cursor-pointer">
+          Устувор
+        </a>
+        <div class="hidden w-full justify-end pr-5 items-center md:flex md:space-x-10 list-none">
+          <a class="text-base font-normal text-white hover:text-yellow-600"
+             routerLink=""
+             routerLinkActive="active-link"
+             [routerLinkActiveOptions]="{exact:true}">Главная
+          </a>
+          <a class="text-base font-normal text-white hover:text-yellow-600"
+             routerLink="menu"
+             routerLinkActive="active-link">Меню
+          </a>
+          <a class="text-base font-normal text-white hover:text-yellow-600"
+             routerLink="contact"
+             routerLinkActive="active-link">Контакты
+          </a>
+        </div>
+        <div class="flex items-end md:hidden">
+          <button
+            (click)="toggleMenu()"
+            class="inline-flex items-end justify-end p-2 text-gray-400 bg-gray-50 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-50"
+            type="button"
+            aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                 stroke="currentColor" aria-hidden="true" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div
+    *ngIf="isMenuOpen"
+    class="fixed top-0 left-0 w-full h-full bg-black opacity-50"
+    (click)="toggleMenu()"
+  ></div>
+</div>

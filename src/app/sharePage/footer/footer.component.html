@@ -1,0 +1,33 @@
+<section class="pb-5 bg-black w-full">
+  <div class="container mx-auto flex flex-col justify-around p-4 text-center md:p-10 lg:flex-row">
+    <div class="flex flex-col justify-center mx-auto lg:text-left sm:text-center md:text-center">
+      <p class="mb-1 text-sm font-medium tracking-widest uppercase text-white">
+        Ваш надежный выбор для создания стильной и удобной мебели
+      </p>
+      <h1 class="py-2 w-fit  text-4xl font-bold sm:mx-0 mx-auto leading-tight title-font text-[#FFB300] cursor-pointer"
+          routerLink="/">
+        Устувор
+      </h1>
+    </div>
+    <div
+      class="flex flex-col items-center justify-center flex-shrink-0 mt-6 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 lg:ml-4 lg:mt-0 lg:justify-end">
+      <div class="flex lg:mt-5 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-start">
+        <a aria-label="add to slack" [href]="links.link"
+           *ngFor="let links of (socialLinks | async)"
+           class="py-2.5 px-3 border bg-white rounded-full duration-200
+                  hover:border-yellow-400 hover:shadow-lg hover:shadow-orange-500/60">
+          <div class="flex justify-center space-x-2">
+            <img [src]="links.icon" [alt]="links.alt"
+                 class="w-6 h-6" loading="lazy" width="128" height="128">
+            <span class="hidden font-medium md:block text-gray-700">{{links.name}}</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <hr class="border-gray-700">
+  <div class="w-full mx-auto text-center mt-3  justify-center">
+    <p class="text-[#FFB300] font-thin px-2 ">Copyright © 2023. Все права защищены</p>
+    <p class="text-gray-400 pt-2"> Разработан с <span class="">❤</span> в <a href="https://t.me/Amirichvoker"><b>E</b>lsegroup</a></p>
+  </div>
+</section>

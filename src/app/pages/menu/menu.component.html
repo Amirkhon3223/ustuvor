@@ -1,0 +1,61 @@
+<div class="menu pb-10" id="menu">
+  <div class="text-center px-5 pt-20 pb-5">
+    <h1 class="font-bold lg:text-4xl text-3xl mb-3">Все продукты</h1>
+    <h1 class="lg:text-lg text-md font-medium text-slate-800">Выберите на свой вкус, а если не нашли, то сделаем для вас на ваш вкус и цвет</h1>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4">
+    <section
+      id="Projects"
+      class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 md:grid-cols-2
+            justify-items-center justify-center gap-3 gap-y-5 md:gap-10"
+    >
+      <div
+        *ngFor="let furnitures of furniture; index as i"
+        [routerLink]="['/menu/', furnitures.id]"
+        class="w-72 bg-white shadow-md rounded-xl duration-500 transition hover:scale-105 hover:shadow-xl cursor-pointer project-card"
+      >
+        <div class="img-container">
+          <img
+            [src]="furnitures.fImg[0]"
+            alt="Ustuvor, Устувор"
+            class="h-80 w-72 object-cover rounded-t-xl duration-200"
+          />
+        </div>
+        <div class="px-4 py-3 w-72">
+          <p class="text-lg font-bold text-black truncate block capitalize">{{furnitures.fName}}</p>
+          <p class="text-gray-700 mr-3 text-sm line-clamp-1">{{furnitures.fDescribe}}</p>
+          <div class="flex items-center">
+            <p class="text-lg font-semibold text-black cursor-auto my-2">{{furnitures.fPrice | currency:'TJS'}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  <div class="flex flex-col">-->
+    <!--    <div class="mt-10 grid lg:grid-cols-3 gap-x-8 gap-y-8 items-center">-->
+
+    <!--      <div-->
+    <!--        *ngFor="let furnitures of furniture; index as i"-->
+    <!--        class="group group-hover:bg-opacity-60 transition duration-500 relative bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 sm:p-28 py-36 px-10 flex justify-center items-center">-->
+    <!--        <img class="group-hover:opacity-60 transition duration-500"-->
+    <!--             [src]="furnitures.fImg"-->
+    <!--             alt="Ustuvor, Устувор"/>-->
+    <!--        <div class="absolute sm:top-8 top-4 left-4 sm:left-8 flex justify-start items-start flex-col space-y-2">-->
+    <!--          <div>-->
+    <!--            <p class="group-hover:opacity-60 transition duration-500 text-xl leading-5 text-gray-600 dark:text-white">-->
+    <!--              {{furnitures.fName}}-->
+    <!--            </p>-->
+    <!--          </div>-->
+    <!--          <div>-->
+    <!--            <p class="group-hover:opacity-60 transition duration-500 text-xl font-semibold leading-5 text-gray-800 dark:text-white">-->
+    <!--              {{furnitures.fPrice | currency:'TJS'}}-->
+    <!--            </p>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+  </div>
+
+</div>
