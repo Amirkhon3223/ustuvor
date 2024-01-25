@@ -1,9 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {OrderDetailsService} from "../../services/order-details.service";
-import {ActivatedRoute} from "@angular/router";
-import {Observable} from "rxjs";
-import {LinksService, Social} from "../../services/links.service";
-
 
 @Component({
   selector: 'app-menu',

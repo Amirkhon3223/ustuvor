@@ -8,13 +8,16 @@ import {DetailFromHomeComponent} from "./pages/detail-from-home/detail-from-home
 import {NotFoundComponent} from "./pages/not-found/not-found.component";
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }, // Корневой маршрут явно определен как ''
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'menu/:id', component: MenupageComponent },
   { path: 'decorative/:id', component: DetailFromHomeComponent },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' },
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+
 ];
 
 @NgModule({

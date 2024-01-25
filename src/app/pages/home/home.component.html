@@ -1,16 +1,15 @@
 <app-hero-section></app-hero-section>
 
-<div class="max-w-7xl mx-auto px-5 sm:px-3 md:px-10 lg:px-5 xl:px-0">
+<div class="max-w-7xl mx-auto px-6 sm:px-3 md:px-11 lg:px-5 xl:px-0">
   <!-- component -->
   <div class="flex justify-center items-center">
-    <div class="2xl:mx-auto 2xl:container lg:py-5 md:py-5 sm:py-0 w-96 sm:w-auto">
+    <div class="2xl:mx-auto 2xl:container lg:py-5 md:py-5 sm:py-0  sm:w-auto">
       <div role="main" class="flex flex-col items-center justify-center">
-        <h1 class="lg:text-4xl text-2xl font-bold text-center text-gray-800 dark:text-gray-50">
+        <h1 class="lg:text-3xl text-2xl font-bold text-center text-gray-900">
           Мебели, отражающие ваш стиль и уютное пространство
         </h1>
-        <p class="lg:text-lg text-sm font-medium leading-normal text-center text-gray-600 dark:text-white mt-2 w-full">
-          Погрузитесь в мир красоты и комфорта с нашей коллекцией лучшей мебели. <br>
-          Мы предлагаем широкий выбор стилей и дизайнов, которые помогут превратить ваш дом в уютное место
+        <p class="lg:text-md text-sm font-medium leading-normal text-center text-gray-800 mt-2 w-full">
+          Погрузитесь в мир красоты и комфорта с нашей коллекцией лучшей мебели
         </p>
       </div>
 
@@ -21,7 +20,7 @@
               <div [routerLink]="['/decorative/', item.id]"
                 class="relative overflow-hidden cursor-pointer group" [ngClass]="{'col-span-2': i === 2}">
                 <p class="p-2 sm:p-6 text-xs lg:text-lg font-medium leading-3 text-white absolute top-0 right-0">
-                  Price: {{ item.price }}</p>
+                  Price: {{ item.price}}</p>
                 <div class="absolute bottom-0 left-0 sm:p-6 p-2">
                   <h2 class="sm:text-md text-xs lg:text-lg mb-1 font-normal text-white">{{ item.name }}</h2>
                   <p class="sm:text-sm text-xs leading-4 font-thin text-white">{{ item.type }}</p>
@@ -75,7 +74,7 @@
   </div>
 
 
-<p class="text-center sm:py-0 py-5 lg:mb-5">
+<p class="text-center py-5 lg:mb-5">
   <button
     routerLink="contact"
     class="bg-[#ffb338] font-medium p-2 px-3 rounded-lg hover:scale-110 hover:text-white transition">

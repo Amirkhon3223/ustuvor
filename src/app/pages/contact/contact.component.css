@@ -48,7 +48,7 @@
     min-height: max-content;
     padding: 1rem;
   }
-  
+
   .contact-form,
   .contact-info {
     align-items: center;
@@ -67,6 +67,6 @@
 
   .form-control {
     width: 100%;
-    margin-bottom: 1rem; /* Добавил небольшой отступ между полями */
+    margin-bottom: 1rem;
   }
 }
